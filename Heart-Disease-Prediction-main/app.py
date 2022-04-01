@@ -7,7 +7,7 @@ import joblib
 import os
 
 
-location = 'C:/Users/VENOM/Downloads/Heart-Disease-Prediction-main/Heart-Disease-Prediction-main'
+location = 'C:/**path/**/Heart-Disease-Prediction-main'
 fullpath = os.path.join(location, 'hdp_model.pkl')
 
 app = Flask(__name__)
