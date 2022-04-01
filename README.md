@@ -2,7 +2,7 @@
 
 ## About
 
-The objective of this project is to detect whether patients have any chance of heart disease or
+The objective of this project is to detect whether the person has any chances  of  heart disease or
 not by giving number of features to patients with having maximum accuracy of above 97%. By
 Using Machine learning algorithms and deep learning are applied to compare the results and
 analysis of the UCI Machine Learning Heart Disease dataset. 
