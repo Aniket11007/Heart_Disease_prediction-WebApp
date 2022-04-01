@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+    <title>Submit Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        
+        <h1 class='header' ><span class="header_font">Heart Disease Prediction System</span>
+            <center>
+                <div class="timepass" >
+                    <p>Hey, {{ n }} fill all the correct details in the given form to check for Heart Disease.</p>
+                </center>
+               
+                </div>
+                     
+        </h1>
+    </div>
+        <center>
+            <div class="homesub">
+
+                <form action="{{ url_for('predict') }}" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label for="age"><b>Age</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Enter Your Age" name="age" id="age" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="sex"><b>Sex</b></label>
+                    </td>
+                    <td>
+                        <center><input type="radio" name="sex" value="1"> Male
+                        <input type="radio" name="sex" value="0"> Female
+                        </center>
+                    </td>
+                </tr>
+                
+                <tr> 
+                    <td>
+                        <label for="cp"><b>Chest Pain Type</b></label>
+                    </td>
+                    <td>
+                        <select name="cp" id="cp">
+                            <option value="0">Type-1</option>
+                            <option value="1">Type-2</option>
+                            <option value="2">Type-3</option>
+                            <option value="3">Type-4</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="trestbps"><b>Blood Pressure</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Blood Pressure(90-200)" name="trestbps" id="trestbps" required>
+                    </td>
+                </tr>
+           
+                <tr>
+                    <td>
+                        <label for="chol"><b>Cholestoral</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Cholestoral(120-570)" name="chol" id="chol" required>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <label for="fbs"><b>Fasting Blood Sugar</b></label>
+                    </td>
+                    <td>   
+                        <center><input type="radio" name="fbs" value="1"> Yes
+                        <input type="radio" name="fbs" value="0"> No
+                        </center>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="restecg"><b>Electrocardiographic</b></label>
+                    </td>
+                    <td>
+                        <select name="restecg" id="restecg">
+                            <option value="0">Type-1</option>
+                            <option value="1">Type-2</option>
+                            <option value="2">Type-3</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="thalach"><b>Heart Rate<b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="HeartRate(60-220)" name="thalach" id="thalach" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="exang"><b>Angina</b></label>
+                    </td>
+                    <td>
+                        <center><input type="radio" name="exang" value="1"> Yes
+                        <input type="radio" name="exang" value="0"> No
+                        </center>
+                    </td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <label for="oldpeak"><b>Oldpeak</b></label>
+                    </td>
+                    <td>
+                        <select name="oldpeak" id="oldpeak">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        <label for="slope"><b>Slope</b></label>
+                    </td>
+                    <td>
+                        <select name="slope" id="slope">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>                    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="ca"><b>CA</b></label>
+                    </td>
+                    <td>
+                        <select name="ca" id="ca">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="thal"><b>Thalassemia</b></label>
+                    </td>
+                    <td>
+                        <select name="thal" id="thal">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                    </tr>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+            </table>
+            <button type="submit" id="subbtn">Submit</button>
+        </form>
+
+                
+            </div>
+        </center>
+            
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/Aniket11007">
+        <i class="fa fa-github contact-icon " style="font-size:24px"></i></a>
+       
+      <a target="_blank" href="https://www.linkedin.com/in/aniket-jha-791346217/">
+        <i
+        class="fa fa-linkedin  contact-icon" style="font-size:24px"></i></a>
+    </div>
+    <p class='footer-description'>Made by Aniket Jha.</p>
+  </div>
+    <style>
+
+.contact-icon{
+	color: #ffffff;
+	padding: 7px;
+}
+.footer{
+	flex-shrink: 0;
+	position:relative;
+	padding: 10px;
+	position:relative;	background:linear-gradient(45deg,#0F2027, #203A43,#2C5364);
+	background-size: 300% 300%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+
+.footer-description{
+	color: #7DF9FF;
+	margin: 0;
+	font-size: 12px;
+}
+
+
+
+        
+.homesub{
+        background: #1C304A;
+        color: #7DF9FF;
+        }
+        
+        
+.timepass{
+	color: #7DF9FF;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: -5px 0 0;
+}
+
+
+        .container{
+    padding: 5px;
+	position:relative;	background:linear-gradient(45deg,#0F2027, #203A43,#2C5364);
+
+
+	background-size: 400% 400%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+
+
+
+        .header{
+    color: #7DF9FF;
+	font-size: 35px;
+	font-weight: normal;
+        }
+
+
+        body{
+           
+           text-align: center;
+           margin: 0;
+           padding: 0;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           position: absolute;
+           overflow-x: hidden;
+       }
+        
+       #subbtn {
+        background-color: #03DAC5;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        width: 30%;
+        opacity: 0.9;
+        }
+
+    #age {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+    #sex {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+    #trestbps {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #chol {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #fbd {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+    #cp{
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    #ca{
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    #excang {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #oldpeak {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #slope {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #thal {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+    #restecg {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    #thalach {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    </style>
+
+</body>
+</html>

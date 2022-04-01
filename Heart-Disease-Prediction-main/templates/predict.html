@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--
+    <div class="container">
+        <form action="{{ url_for('predict')}}" method="post"></form>
+        <h1 class='header' ><span class="header_font">Heart Disease Prediction System</span>
+        
+    </h1>
+        </div>
+    -->
+    
+  <div class="container1">
+    <h2 class='header'><span class="headder_font">Heart Disease Prediction </span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application built with Flask,which predict chances of having heart disease or not !.</p><br>
+    </div>
+  </div>
+
+
+
+        <div class="results">
+			{% if prediction==1 %}
+				<h1><span class='danger' id="danger">Oops! YOU HAVE CHANCES OF HEART DISEASE.<br></span></h1>
+                <br>
+                <iframe src="https://giphy.com/embed/l3vR5kvzODSuw3bnq" width="480" height="320" frameBorder="0"
+                 class="giphy-embed" allowFullScreen></iframe><p>
+                  </p>         <br>
+                
+                      <p class="card">Please contact nearest hospitals</p>
+                
+				
+			{% elif prediction==0 %}
+				<h1><span class='safe' id="safe" >Congratulation!<br><br></span></h1>
+                <h1> YOU DON'T HAVE HEART DISEASE.</h1><iframe src="https://giphy.com/embed/dXcYUrKTb5ZwK7D7dB" 
+                width="280" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
+                
+                
+			
+			{% endif %}
+		</div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    
+
+
+    
+  <!-- Footer -->
+
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/Aniket11007">
+        <i class="fa fa-github contact-icon " style="font-size:24px"></i></a>
+       
+      <a target="_blank" href="https://www.linkedin.com/in/aniket-jha-791346217/">
+        <i
+        class="fa fa-linkedin  contact-icon" style="font-size:24px"></i></a>
+    </div>
+    <p class='footer-description'>Made by Aniket Jha.</p>
+  </div>  
+    <style>
+      .card{
+        color: black;
+        margin: 0;
+        font-weight: bold ;
+        font-size: 25px;
+      }
+      
+.header{
+  margin: 0;
+        }
+
+        .headder_font{
+    color: #7DF9FF;
+	font-size: 35px;
+	font-weight: normal;
+}
+
+.description p{
+	color: #7DF9FF;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: -5px 0 0;
+}
+
+
+        .container1{
+    padding: 30px;
+	position:relative;	background:linear-gradient(45deg,#0F2027, #203A43,#2C5364);
+
+
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+
+        
+.contact-icon{
+	color: #ffffff;
+	padding: 7px;
+}
+
+
+
+
+.footer{
+	flex-shrink: 0;
+	position:relative;
+	padding: 20px;
+	position:relative;	background:linear-gradient(45deg,#0F2027, #203A43,#2C5364);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+
+.footer-description{
+	color: #7DF9FF;
+	margin: 0;
+	font-size: 12px;
+}
+
+
+
+
+        body{
+           
+           text-align: center;
+           margin: 0;
+           padding: 0;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           position: absolute;
+           overflow-x: hidden;
+       }
+
+       #danger{
+            color: red;
+       }
+
+       #safe{
+            color: green;
+       }
+/*
+       .footer{     
+        text-align: center;
+            background: #000000;
+            color: white;
+            font-size: 15px;  
+            margin:-8px;
+            position: fixed;
+            padding: 0px;
+            bottom: 0;
+            width: 102%;
+           
+       }
+       */
+
+    </style>
+
+</body>
+</html>

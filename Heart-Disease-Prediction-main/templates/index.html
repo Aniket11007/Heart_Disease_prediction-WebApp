@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Heart Disease Prediction</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--
+    <div class="container1">
+        
+        <h3 class='header' ><span class="headder_font">Heart Disease Prediction System</span>
+        </h3>
+    </div>
+  -->
+     <!--Title -->
+
+  <div class="container1">
+    <h2 class='header'><span class="headder_font">Heart Disease Prediction </span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application built with Flask,which predict chances of having heart disease or not !.</p><br>
+    </div>
+  </div>
+
+
+        <div class="homebody">
+			<form action="/detail" method="POST">
+				<div class="container">
+					<div class="brand-logo"></div>
+					<div class="brand-title">MedX</div>
+					<div class="inputs">
+						<label for="Username"><b>Name :  </b></label>
+            <input type="text" placeholder="Enter your Name" name="Username" id="Username" required>
+						<label for="email"><b>Email :  </b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <center>
+              <button type="submit" id="nextbtn">Next</button></a>
+		
+            
+            </center>
+              
+    			</div>
+        	<a href="https://github.com/Aniket11007">Github - Aniket Jha</a>
+				</div>>
+			</form>
+		</div>
+    </center>
+
+   
+
+    <style>
+
+      
+
+
+
+
+
+      
+.header{
+  margin: 0;
+        }
+
+        .headder_font{
+    color: #7DF9FF;
+	font-size: 35px;
+	font-weight: normal;
+}
+
+
+.description p{
+	color: #7DF9FF;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: -5px 0 0;
+}
+
+
+        .container1{
+    padding: 30px;
+	position:relative;	background:linear-gradient(45deg,#0F2027, #203A43,#2C5364);
+
+
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+
+.homebody {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+  background: url("static/new.gif");
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow:auto;
+  font-family: poppins;
+}
+
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 520px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #1C304A;
+  box-shadow: 14px 14px 20px #1C304A, -14px -14px 20px  #1C304A;
+}
+.brand-logo {
+  height: 50px;
+  width: 50px;
+  background-image: url("https://img.icons8.com/color/48/000000/like--v3.png");
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 5px 6px 9px #1C304A, -5px -6px 9px #1C304A;
+}
+
+.brand-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: #7DF9FF;
+  letter-spacing: 1px;
+}
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+label{
+	font-size: 14px;
+	color: #7DF9FF;
+	margin-bottom: 15px;
+}
+
+label, input, button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline:   none;
+  box-sizing: border-box;
+}
+
+
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.sub {
+  margin-top: 20px;
+  background: #7DF9FF;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #1C304A, -6px -6px 6px #1C304A;
+  transition: 0.5s;
+  color: #ecf0f3;
+}
+
+.sub:hover {
+  box-shadow: none;
+}
+
+a {
+  position: absolute;
+  font-size: 14px;
+  bottom: 4px;
+  right: 4px;
+  text-decoration: none;
+  color:#7DF9FF;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.disp{
+	font-family: poppins;
+	background: #ecf0f3;
+}
+.resname{
+	color:#7DF9FF;
+	font-size:20px;
+	display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  padding-top: 5px;
+}
+
+.res{
+	font-size: 15px;
+}
+
+
+
+
+        body{
+           
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            overflow-x: hidden;
+        }
+        
+        #nextbtn {
+  margin-top: 20px;
+  background: #03DAC5;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #1C304A, -6px -6px 6px #1C304A;
+  transition: 0.5s;
+  color: #ecf0f3;
+        }
+
+        #Username {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+    #email {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    
+    }
+
+
+    </style>
+</body>
+</html>
